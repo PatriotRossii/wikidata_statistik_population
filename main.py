@@ -1,5 +1,5 @@
 from wikibaseintegrator import wbi_login, WikibaseIntegrator
-from wikibaseintegrator.datatypes import String, Quantity, Time, Item
+from wikibaseintegrator.datatypes import String, Quantity, Time, Item, MonolingualText
 from wikibaseintegrator.wbi_config import config as wbi_config
 from wikibaseintegrator.wbi_helpers import execute_sparql_query
 from wikibaseintegrator.wbi_enums import WikibaseDatePrecision
@@ -65,7 +65,7 @@ def main(population_info_filename: str, gemeinde_info_filename: str,
 			], references=[
 				[
 					String(prop_nr="P854", value="https://data.statistik.gv.at/web/meta.jsp?dataset=OGD_f0743_VZ_HIS_GEM_1"),
-					String(prop_nr="P1476", value="Population census data since 1869 for communes"),
+					MonolingualText(prop_nr="P1476", text="Population census data since 1869 for communes", language="en"),
 					Time(prop_nr="P813", time=datetime(year=2023, month=1, day=24), precision=WikibaseDatePrecision.DAY),
 					Item(prop_nr="P123", value="Q358870")
 				]
