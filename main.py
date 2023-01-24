@@ -56,7 +56,7 @@ def main(population_info_filename: str, gemeinde_info_filename: str,
 
 		item = wbi.item.get(entity_id=entity_id)
 		claims = []
-		for census_code, count in population_information:
+		for census_code, count in population_information.items():
 			date = census_codes[census_code]
 			claims.append(Quantity(prop_nr="P1082", amount=int(count), qualifiers=[
 				Time(prop_nr="P585", time=date.strftime("+%Y-%m-%dT00:00:00Z"), precision=WikibaseDatePrecision.DAY),
