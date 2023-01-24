@@ -1,4 +1,5 @@
 from wikibaseintegrator import wbi_login, WikibaseIntegrator
+from wikibaseintegrator.datatypes import String, Quantity, Time, Item
 from wikibaseintegrator.wbi_config import config as wbi_config
 from wikibaseintegrator.wbi_helpers import execute_sparql_query
 from wikibaseintegrator.wbi_enums import WikibaseDatePrecision
